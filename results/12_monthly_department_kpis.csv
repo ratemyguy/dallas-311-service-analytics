@@ -1,0 +1,526 @@
+created_month,department,requests,external_requests,sla_eligible_closed,closed_on_time,median_days_to_close
+2024-10-01,311 Customer Service,3630,3629,3175,2756,0.93
+2024-10-01,Animal Services,5519,5498,5519,4369,0.08
+2024-10-01,Bond & Construction,1,1,1,0,176.07
+2024-10-01,Budget,105,104,97,72,29.28
+2024-10-01,City Attorney,15,15,15,12,27.93
+2024-10-01,Code Compliance,11243,7726,675,524,7.00
+2024-10-01,Convention & Events,1,1,1,1,15.07
+2024-10-01,Emergency Mgmt & Crisis Response,1269,1250,833,819,1.02
+2024-10-01,Environmental Quality,31,30,29,29,3.69
+2024-10-01,Facilities & Real Estate,4,4,0,0,
+2024-10-01,Fire-Rescue,136,136,132,114,5.97
+2024-10-01,Housing,40,40,26,26,8.64
+2024-10-01,Library,18,18,18,18,2.21
+2024-10-01,Municipal Court,12,12,12,10,2.10
+2024-10-01,Parks,387,381,318,263,8.64
+2024-10-01,Planning & Development,321,307,210,175,8.89
+2024-10-01,Police,1214,1208,1083,812,8.02
+2024-10-01,Risk Management,6,6,6,6,0.41
+2024-10-01,Sanitation,7312,7301,6797,6679,1.89
+2024-10-01,Transportation & Public Works,9438,9177,8525,7818,0.83
+2024-10-01,Water Utilities,621,614,550,470,2.51
+2024-11-01,311 Customer Service,3152,3152,2777,2485,0.80
+2024-11-01,Animal Services,4705,4692,4705,3829,0.08
+2024-11-01,Bond & Construction,2,2,1,0,174.75
+2024-11-01,Budget,80,80,77,71,18.41
+2024-11-01,City Attorney,16,16,13,12,12.69
+2024-11-01,Code Compliance,8247,5852,471,382,7.13
+2024-11-01,Convention & Events,1,1,1,1,3.04
+2024-11-01,Emergency Mgmt & Crisis Response,1063,1050,681,673,1.13
+2024-11-01,Environmental Quality,21,21,20,20,3.71
+2024-11-01,Facilities & Real Estate,3,3,0,0,
+2024-11-01,Fire-Rescue,95,95,93,41,15.94
+2024-11-01,Housing,33,33,23,23,4.07
+2024-11-01,Library,11,11,11,11,0.79
+2024-11-01,Municipal Court,8,8,7,3,11.20
+2024-11-01,Parks,321,315,262,222,8.13
+2024-11-01,Planning & Development,218,202,134,122,5.06
+2024-11-01,Police,1082,1082,989,788,8.83
+2024-11-01,Risk Management,4,4,4,4,0.22
+2024-11-01,Sanitation,6004,5996,5595,5510,2.02
+2024-11-01,Transportation & Public Works,7918,7708,7161,6648,0.93
+2024-11-01,Water Utilities,634,624,590,534,1.89
+2024-12-01,311 Customer Service,2787,2786,2434,2256,0.72
+2024-12-01,Animal Services,4579,4564,4579,3697,0.09
+2024-12-01,Bond & Construction,3,3,1,0,133.10
+2024-12-01,Budget,119,118,116,116,4.18
+2024-12-01,City Attorney,10,10,10,10,26.37
+2024-12-01,Code Compliance,8318,5383,458,371,6.78
+2024-12-01,Emergency Mgmt & Crisis Response,963,951,650,612,1.70
+2024-12-01,Environmental Quality,16,16,15,15,2.68
+2024-12-01,Facilities & Real Estate,2,2,0,0,
+2024-12-01,Fire-Rescue,82,82,77,73,4.31
+2024-12-01,Housing,37,37,27,27,2.48
+2024-12-01,Library,12,12,12,11,2.14
+2024-12-01,Municipal Court,19,19,19,15,3.70
+2024-12-01,Parks,200,194,162,141,7.69
+2024-12-01,Planning & Development,213,198,106,105,4.00
+2024-12-01,Police,1096,1093,1000,781,7.89
+2024-12-01,Risk Management,5,5,5,5,2.15
+2024-12-01,Sanitation,6239,6230,5751,5650,1.67
+2024-12-01,Transportation & Public Works,7280,7047,6607,6082,0.87
+2024-12-01,Water Utilities,742,731,695,639,1.16
+2025-01-01,311 Customer Service,2894,2893,2573,2264,0.84
+2025-01-01,Animal Services,5114,5102,5114,4412,0.09
+2025-01-01,Budget,46,46,41,37,25.20
+2025-01-01,City Attorney,26,26,25,23,19.92
+2025-01-01,Code Compliance,9137,6064,621,552,5.86
+2025-01-01,Convention & Events,2,2,2,2,2.59
+2025-01-01,Emergency Mgmt & Crisis Response,1222,1176,912,872,1.74
+2025-01-01,Environmental Quality,25,25,24,22,1.25
+2025-01-01,Facilities & Real Estate,2,2,1,1,7.72
+2025-01-01,Fire-Rescue,132,131,122,111,5.90
+2025-01-01,Housing,52,52,41,41,2.02
+2025-01-01,Library,19,19,19,19,2.00
+2025-01-01,Municipal Court,9,9,9,6,5.17
+2025-01-01,Parks,198,194,158,144,5.83
+2025-01-01,Planning & Development,253,242,145,123,5.84
+2025-01-01,Police,991,989,893,752,6.91
+2025-01-01,Risk Management,8,8,8,8,0.83
+2025-01-01,Sanitation,6112,6104,5610,5323,3.00
+2025-01-01,Transportation & Public Works,7936,7681,7097,6580,1.00
+2025-01-01,Water Utilities,879,869,835,748,0.92
+2025-02-01,311 Customer Service,2738,2738,2450,2232,0.66
+2025-02-01,Animal Services,4775,4772,4775,4190,0.09
+2025-02-01,Bond & Construction,1,1,0,0,
+2025-02-01,Budget,87,87,83,79,12.86
+2025-02-01,City Attorney,20,20,20,16,25.64
+2025-02-01,Code Compliance,9325,5593,764,671,6.05
+2025-02-01,Convention & Events,2,2,2,2,3.96
+2025-02-01,Emergency Mgmt & Crisis Response,1263,1232,841,779,3.74
+2025-02-01,Environmental Quality,15,15,15,15,3.15
+2025-02-01,Facilities & Real Estate,1,1,0,0,
+2025-02-01,Fire-Rescue,110,109,107,82,6.74
+2025-02-01,Housing,35,35,29,29,1.94
+2025-02-01,Library,6,6,6,6,0.57
+2025-02-01,Municipal Court,4,4,4,3,6.56
+2025-02-01,Parks,231,228,198,188,5.23
+2025-02-01,Planning & Development,284,267,188,157,6.01
+2025-02-01,Police,824,824,738,603,7.43
+2025-02-01,Risk Management,5,5,5,4,0.69
+2025-02-01,Sanitation,5772,5762,5347,5154,2.08
+2025-02-01,Transportation & Public Works,7962,7777,7159,6682,0.86
+2025-02-01,Water Utilities,777,761,723,606,1.63
+2025-03-01,311 Customer Service,3377,3376,2981,2554,0.92
+2025-03-01,Animal Services,5030,5019,5028,4078,0.11
+2025-03-01,Bond & Construction,2,2,1,0,38.99
+2025-03-01,Budget,107,106,105,91,19.01
+2025-03-01,City Attorney,15,15,15,13,20.23
+2025-03-01,Code Compliance,11923,7750,854,699,5.62
+2025-03-01,Emergency Mgmt & Crisis Response,1134,1100,717,696,3.02
+2025-03-01,Environmental Quality,21,21,21,21,3.17
+2025-03-01,Facilities & Real Estate,8,8,2,2,4.97
+2025-03-01,Fire-Rescue,112,110,110,96,2.89
+2025-03-01,Housing,49,49,38,37,2.00
+2025-03-01,Library,10,10,10,10,1.46
+2025-03-01,Municipal Court,9,9,9,6,2.86
+2025-03-01,Parks,414,408,344,295,7.84
+2025-03-01,Planning & Development,374,355,254,224,5.88
+2025-03-01,Police,1070,1066,996,776,7.88
+2025-03-01,Risk Management,7,7,7,7,0.72
+2025-03-01,Sanitation,7299,7287,6808,6249,3.18
+2025-03-01,Transportation & Public Works,10979,10633,9991,8771,1.12
+2025-03-01,Water Utilities,880,868,800,670,1.55
+2025-04-01,311 Customer Service,3516,3516,3136,2829,0.73
+2025-04-01,Animal Services,5215,5200,5215,4344,0.09
+2025-04-01,Bond & Construction,1,1,1,0,12.93
+2025-04-01,Budget,168,168,162,156,12.89
+2025-04-01,City Attorney,19,19,18,18,22.32
+2025-04-01,Code Compliance,13389,9094,879,748,7.05
+2025-04-01,Emergency Mgmt & Crisis Response,935,884,660,640,1.68
+2025-04-01,Environmental Quality,18,17,17,17,4.06
+2025-04-01,Facilities & Real Estate,3,3,0,0,
+2025-04-01,Fire-Rescue,103,101,100,98,1.86
+2025-04-01,Housing,56,56,43,35,6.92
+2025-04-01,Library,12,12,12,11,1.39
+2025-04-01,Municipal Court,6,6,6,5,5.22
+2025-04-01,Parks,327,319,247,209,9.02
+2025-04-01,Planning & Development,360,345,246,220,5.02
+2025-04-01,Police,1313,1310,1199,975,7.80
+2025-04-01,Risk Management,5,5,5,5,1.55
+2025-04-01,Sanitation,7289,7282,6715,6494,2.16
+2025-04-01,Transportation & Public Works,10384,10099,9352,7947,1.56
+2025-04-01,Water Utilities,808,791,721,589,1.79
+2025-05-01,311 Customer Service,3472,3472,3065,2715,0.79
+2025-05-01,Animal Services,5611,5602,5611,4504,0.10
+2025-05-01,Bond & Construction,3,3,1,0,42.13
+2025-05-01,Budget,113,113,109,104,8.13
+2025-05-01,City Attorney,27,27,27,26,17.99
+2025-05-01,Code Compliance,14704,10965,848,716,7.23
+2025-05-01,Convention & Events,2,2,2,2,3.39
+2025-05-01,Emergency Mgmt & Crisis Response,1021,979,739,720,0.92
+2025-05-01,Environmental Quality,14,13,11,11,0.17
+2025-05-01,Facilities & Real Estate,11,11,0,0,
+2025-05-01,Fire-Rescue,122,120,114,107,3.37
+2025-05-01,Housing,51,51,40,31,15.46
+2025-05-01,Library,6,6,6,4,4.54
+2025-05-01,Municipal Court,7,7,6,4,7.18
+2025-05-01,Parks,424,419,354,321,8.02
+2025-05-01,Planning & Development,436,416,315,290,3.98
+2025-05-01,Police,1204,1198,1085,836,8.64
+2025-05-01,Risk Management,4,4,4,4,0.97
+2025-05-01,Sanitation,7985,7979,7352,7192,2.09
+2025-05-01,Transportation & Public Works,10666,10440,9531,8233,1.19
+2025-05-01,Water Utilities,799,783,738,583,1.93
+2025-06-01,311 Customer Service,3238,3238,2832,2465,0.94
+2025-06-01,Animal Services,4892,4882,4892,3825,0.09
+2025-06-01,Budget,103,103,101,94,22.14
+2025-06-01,City Attorney,23,23,21,21,14.17
+2025-06-01,Code Compliance,14090,10757,834,674,6.98
+2025-06-01,Convention & Events,1,1,1,1,0.57
+2025-06-01,Emergency Mgmt & Crisis Response,986,951,706,698,1.72
+2025-06-01,Environmental Quality,15,15,13,12,3.99
+2025-06-01,Facilities & Real Estate,4,2,0,0,
+2025-06-01,Fire-Rescue,127,127,118,94,2.49
+2025-06-01,Housing,34,34,24,23,12.17
+2025-06-01,Library,11,11,11,8,5.99
+2025-06-01,Municipal Court,3,3,3,2,4.95
+2025-06-01,Parks,463,457,387,327,6.95
+2025-06-01,Planning & Development,384,369,304,275,6.82
+2025-06-01,Police,1035,1029,951,704,8.49
+2025-06-01,Risk Management,1,1,1,1,0.10
+2025-06-01,Sanitation,7978,7973,7405,6615,4.26
+2025-06-01,Transportation & Public Works,10014,9773,8903,7931,1.09
+2025-06-01,Water Utilities,685,676,638,516,1.26
+2025-07-01,311 Customer Service,3435,3434,3018,2566,1.06
+2025-07-01,Animal Services,4873,4858,4873,3387,0.14
+2025-07-01,Budget,128,127,120,109,9.32
+2025-07-01,City Attorney,31,31,31,31,12.90
+2025-07-01,Code Compliance,13832,10743,938,788,7.09
+2025-07-01,Convention & Events,1,1,1,1,0.69
+2025-07-01,Emergency Mgmt & Crisis Response,960,914,736,721,1.01
+2025-07-01,Environmental Quality,15,14,14,14,2.49
+2025-07-01,Facilities & Real Estate,13,10,0,0,
+2025-07-01,Fire-Rescue,150,148,145,115,4.12
+2025-07-01,Housing,61,61,57,52,15.15
+2025-07-01,Library,12,12,12,10,0.81
+2025-07-01,Parks,379,376,322,294,6.82
+2025-07-01,Planning & Development,384,375,277,243,4.42
+2025-07-01,Police,1244,1237,1170,998,6.44
+2025-07-01,Risk Management,3,3,3,3,2.73
+2025-07-01,Sanitation,7588,7583,7036,6790,3.08
+2025-07-01,Transportation & Public Works,9833,9643,8762,7952,1.04
+2025-07-01,Water Utilities,726,710,670,541,1.29
+2025-08-01,311 Customer Service,2899,2899,2666,2364,0.90
+2025-08-01,Animal Services,4173,4164,4173,3488,0.12
+2025-08-01,Budget,81,80,76,69,17.45
+2025-08-01,City Attorney,28,28,27,27,11.25
+2025-08-01,Code Compliance,12049,8327,864,766,7.00
+2025-08-01,Convention & Events,1,1,1,1,0.98
+2025-08-01,Emergency Mgmt & Crisis Response,833,793,642,633,0.98
+2025-08-01,Environmental Quality,16,16,16,16,3.37
+2025-08-01,Facilities & Real Estate,5,4,0,0,
+2025-08-01,Fire-Rescue,87,87,87,80,1.98
+2025-08-01,Housing,60,60,42,27,16.89
+2025-08-01,Library,12,12,12,8,4.95
+2025-08-01,Municipal Court,19,19,19,13,6.31
+2025-08-01,Parks,349,341,300,279,6.06
+2025-08-01,Planning & Development,330,322,228,214,3.13
+2025-08-01,Police,931,929,881,751,7.04
+2025-08-01,Risk Management,6,6,6,6,1.21
+2025-08-01,Sanitation,6625,6611,6196,6002,2.65
+2025-08-01,Transportation & Public Works,9116,8894,8386,7664,1.03
+2025-08-01,Water Utilities,630,600,579,472,1.20
+2025-09-01,311 Customer Service,2879,2878,2637,2259,1.14
+2025-09-01,Animal Services,4476,4463,4476,3548,0.13
+2025-09-01,Budget,62,61,54,45,13.67
+2025-09-01,City Attorney,28,28,28,28,17.58
+2025-09-01,Code Compliance,12551,8508,855,712,5.99
+2025-09-01,Convention & Events,4,4,3,3,0.95
+2025-09-01,Emergency Mgmt & Crisis Response,740,719,575,563,0.97
+2025-09-01,Environmental Quality,20,20,19,19,3.72
+2025-09-01,Facilities & Real Estate,5,5,0,0,
+2025-09-01,Fire-Rescue,100,99,92,68,3.79
+2025-09-01,Housing,53,53,35,21,27.95
+2025-09-01,Library,8,8,8,8,4.05
+2025-09-01,Municipal Court,11,11,11,9,3.99
+2025-09-01,Parks,392,389,335,304,8.97
+2025-09-01,Planning & Development,369,354,221,184,5.28
+2025-09-01,Police,1062,1056,973,748,7.77
+2025-09-01,Risk Management,2,2,2,2,0.47
+2025-09-01,Sanitation,6725,6717,6256,5923,1.99
+2025-09-01,Transportation & Public Works,8950,8778,8305,7368,1.07
+2025-09-01,Water Utilities,689,647,613,486,1.14
+2025-10-01,311 Customer Service,2808,2805,2628,2237,1.74
+2025-10-01,Animal Services,4669,4661,4669,3486,0.13
+2025-10-01,Budget,55,55,46,40,20.08
+2025-10-01,City Attorney,17,17,17,17,12.21
+2025-10-01,Code Compliance,10461,6760,636,549,6.00
+2025-10-01,Convention & Events,3,3,2,0,227.51
+2025-10-01,Emergency Mgmt & Crisis Response,784,761,555,544,1.03
+2025-10-01,Environmental Quality,40,40,40,40,3.23
+2025-10-01,Facilities & Real Estate,8,7,0,0,
+2025-10-01,Fire-Rescue,118,118,116,92,4.82
+2025-10-01,Housing,76,76,47,21,33.17
+2025-10-01,Library,6,6,6,5,1.60
+2025-10-01,Municipal Court,11,11,11,6,6.26
+2025-10-01,Parks,379,369,322,275,8.91
+2025-10-01,Planning & Development,378,366,251,224,4.27
+2025-10-01,Police,1027,1021,918,767,7.40
+2025-10-01,Risk Management,2,2,2,2,0.89
+2025-10-01,Sanitation,6584,6577,6161,5933,1.25
+2025-10-01,Transportation & Public Works,9024,8367,8328,7574,0.94
+2025-10-01,Water Utilities,583,544,530,461,1.29
+2025-11-01,311 Customer Service,2493,2490,2295,2078,1.72
+2025-11-01,Animal Services,3811,3810,3811,2596,0.18
+2025-11-01,Bond & Construction,1,1,1,0,17.18
+2025-11-01,Budget,67,67,63,62,9.68
+2025-11-01,City Attorney,13,13,13,13,10.99
+2025-11-01,Code Compliance,7879,5422,487,420,5.07
+2025-11-01,Convention & Events,1,1,0,0,
+2025-11-01,Emergency Mgmt & Crisis Response,586,560,414,393,1.76
+2025-11-01,Environmental Quality,20,20,20,19,6.45
+2025-11-01,Facilities & Real Estate,5,5,0,0,
+2025-11-01,Fire-Rescue,91,90,88,70,4.96
+2025-11-01,Housing,47,47,31,9,48.78
+2025-11-01,Library,8,8,8,8,5.02
+2025-11-01,Municipal Court,6,6,6,5,6.69
+2025-11-01,Parks,246,243,221,201,8.96
+2025-11-01,Planning & Development,253,239,166,137,5.17
+2025-11-01,Police,927,927,821,675,9.06
+2025-11-01,Risk Management,3,3,3,3,2.78
+2025-11-01,Sanitation,5266,5259,4888,4769,1.30
+2025-11-01,Transportation & Public Works,7208,6896,6673,6255,0.80
+2025-11-01,Water Utilities,599,586,522,504,1.12
+2025-12-01,311 Customer Service,2535,2533,2349,2064,1.93
+2025-12-01,Animal Services,4021,4013,4021,3265,0.12
+2025-12-01,Budget,64,64,62,61,10.49
+2025-12-01,City Attorney,18,18,18,17,11.88
+2025-12-01,Code Compliance,7798,5231,580,494,5.10
+2025-12-01,Convention & Events,1,1,1,0,177.99
+2025-12-01,Emergency Mgmt & Crisis Response,709,693,516,500,1.67
+2025-12-01,Environmental Quality,16,16,15,14,6.69
+2025-12-01,Fire-Rescue,77,76,71,41,7.88
+2025-12-01,Housing,38,38,26,9,280.03
+2025-12-01,Library,7,7,7,4,5.33
+2025-12-01,Municipal Court,40,40,9,8,5.81
+2025-12-01,Parks,197,194,169,159,6.87
+2025-12-01,Planning & Development,265,257,184,146,6.94
+2025-12-01,Police,1109,1106,1042,911,6.79
+2025-12-01,Risk Management,3,3,3,3,1.95
+2025-12-01,Sanitation,5575,5561,5193,5103,1.22
+2025-12-01,Transportation & Public Works,6512,6242,6000,5653,0.80
+2025-12-01,Water Utilities,518,506,493,463,0.90
+2026-01-01,311 Customer Service,2636,2635,2436,2266,1.43
+2026-01-01,Animal Services,4536,4532,4536,3766,0.17
+2026-01-01,Bond & Construction,1,1,0,0,
+2026-01-01,Budget,59,57,58,58,7.85
+2026-01-01,City Attorney,19,19,19,18,18.93
+2026-01-01,Code Compliance,7147,4936,458,399,4.96
+2026-01-01,Emergency Mgmt & Crisis Response,932,905,715,674,1.08
+2026-01-01,Environmental Quality,14,14,13,13,2.71
+2026-01-01,Facilities & Real Estate,1,1,0,0,
+2026-01-01,Fire-Rescue,97,96,95,71,6.03
+2026-01-01,Housing,32,32,21,5,83.90
+2026-01-01,Library,5,5,5,2,9.21
+2026-01-01,Municipal Court,19,19,10,6,5.48
+2026-01-01,Parks,253,241,213,193,5.89
+2026-01-01,Planning & Development,201,193,145,114,7.67
+2026-01-01,Police,925,921,858,772,6.17
+2026-01-01,Risk Management,1,1,1,1,0.83
+2026-01-01,Sanitation,5229,5218,4837,4653,1.31
+2026-01-01,Transportation & Public Works,6467,6231,6003,5660,0.84
+2026-01-01,Water Utilities,599,587,536,471,1.04
+2026-02-01,311 Customer Service,2796,2796,2502,2276,1.97
+2026-02-01,Animal Services,3578,3572,3578,3290,0.10
+2026-02-01,Budget,87,85,80,79,7.11
+2026-02-01,City Attorney,14,14,12,12,10.89
+2026-02-01,Code Compliance,8932,5419,457,399,4.93
+2026-02-01,Emergency Mgmt & Crisis Response,785,763,551,518,1.66
+2026-02-01,Environmental Quality,16,16,15,15,3.96
+2026-02-01,Facilities & Real Estate,1,1,0,0,
+2026-02-01,Fire-Rescue,77,77,75,67,3.09
+2026-02-01,Housing,48,48,24,2,76.53
+2026-02-01,Library,9,9,9,5,5.00
+2026-02-01,Municipal Court,8,8,7,3,15.60
+2026-02-01,Parks,271,267,224,193,7.67
+2026-02-01,Planning & Development,257,251,198,145,7.62
+2026-02-01,Police,929,928,852,777,6.72
+2026-02-01,Risk Management,1,1,1,1,0.83
+2026-02-01,Sanitation,5398,5384,4980,4836,1.28
+2026-02-01,Transportation & Public Works,7830,7461,7102,6740,0.85
+2026-02-01,Water Utilities,696,684,608,558,1.18
+2026-03-01,311 Customer Service,3132,3131,2816,2122,2.47
+2026-03-01,Animal Services,4172,4159,4164,3618,0.11
+2026-03-01,Bond & Construction,1,1,0,0,
+2026-03-01,Budget,144,140,140,134,9.50
+2026-03-01,City Attorney,15,15,15,12,10.95
+2026-03-01,Code Compliance,12035,7221,489,437,5.04
+2026-03-01,Emergency Mgmt & Crisis Response,737,720,537,517,1.01
+2026-03-01,Environmental Quality,30,30,30,30,2.94
+2026-03-01,Facilities & Real Estate,2,2,0,0,
+2026-03-01,Fire-Rescue,95,95,93,68,2.20
+2026-03-01,Housing,41,40,28,0,85.76
+2026-03-01,Library,11,11,10,8,3.49
+2026-03-01,Municipal Court,7,7,7,7,6.84
+2026-03-01,Parks,391,379,334,291,6.71
+2026-03-01,Planning & Development,327,309,249,226,6.01
+2026-03-01,Police,1064,1060,946,860,6.85
+2026-03-01,Risk Management,3,3,3,3,2.10
+2026-03-01,Sanitation,6518,6504,6060,5883,1.79
+2026-03-01,Transportation & Public Works,9462,9087,8485,7969,0.81
+2026-03-01,Water Utilities,948,935,813,735,1.65
+2026-04-01,311 Customer Service,2907,2905,2637,2495,0.93
+2026-04-01,Animal Services,4373,4365,4373,3740,0.12
+2026-04-01,Bond & Construction,1,1,1,0,58.85
+2026-04-01,Budget,107,106,103,83,11.00
+2026-04-01,City Attorney,15,15,14,14,10.70
+2026-04-01,Code Compliance,12131,8339,572,509,6.15
+2026-04-01,Convention & Events,1,1,1,0,19.99
+2026-04-01,Emergency Mgmt & Crisis Response,751,745,553,525,1.89
+2026-04-01,Environmental Quality,32,32,27,27,4.04
+2026-04-01,Facilities & Real Estate,3,3,0,0,
+2026-04-01,Fire-Rescue,93,90,92,61,8.93
+2026-04-01,Housing,64,61,29,7,66.99
+2026-04-01,Library,10,10,10,8,3.87
+2026-04-01,Municipal Court,26,26,10,7,5.27
+2026-04-01,Parks,352,347,311,289,6.74
+2026-04-01,Planning & Development,339,314,262,248,5.68
+2026-04-01,Police,1254,1252,1135,1083,6.65
+2026-04-01,Risk Management,2,2,2,1,34.57
+2026-04-01,Sanitation,6702,6683,6230,6108,1.26
+2026-04-01,Transportation & Public Works,8869,8569,8121,7535,0.84
+2026-04-01,Water Utilities,730,697,665,635,1.91
+2026-05-01,311 Customer Service,2479,2479,2386,2270,0.84
+2026-05-01,Animal Services,4447,4445,4447,3896,0.10
+2026-05-01,Bond & Construction,3,3,1,0,37.86
+2026-05-01,Budget,67,67,59,57,16.87
+2026-05-01,City Attorney,22,22,21,21,9.67
+2026-05-01,Code Compliance,12160,8747,546,472,6.84
+2026-05-01,Convention & Events,4,4,4,4,0.00
+2026-05-01,Emergency Mgmt & Crisis Response,823,811,615,571,1.41
+2026-05-01,Environmental Quality,33,33,30,29,5.63
+2026-05-01,Facilities & Real Estate,5,5,0,0,
+2026-05-01,Fire-Rescue,99,98,92,67,4.78
+2026-05-01,Housing,73,73,40,15,97.79
+2026-05-01,Library,13,13,13,8,5.28
+2026-05-01,Municipal Court,8,8,8,5,8.01
+2026-05-01,Parks,514,511,442,418,5.68
+2026-05-01,Planning & Development,354,331,267,243,5.75
+2026-05-01,Police,1111,1110,1008,935,7.06
+2026-05-01,Sanitation,6400,6387,6001,5847,1.22
+2026-05-01,Transportation & Public Works,8897,8562,8012,7449,0.79
+2026-05-01,Water Utilities,642,626,597,544,2.03
+2026-06-01,311 Customer Service,2566,2565,2440,2359,0.95
+2026-06-01,Animal Services,4299,4295,4299,4016,0.09
+2026-06-01,Budget,112,112,105,94,10.79
+2026-06-01,City Attorney,34,34,20,20,13.45
+2026-06-01,Code Compliance,13229,9507,633,558,7.07
+2026-06-01,Convention & Events,8,8,2,2,2.78
+2026-06-01,Emergency Mgmt & Crisis Response,830,818,589,569,1.14
+2026-06-01,Environmental Quality,24,24,18,18,6.71
+2026-06-01,Facilities & Real Estate,5,5,0,0,
+2026-06-01,Fire-Rescue,103,103,101,52,12.10
+2026-06-01,Housing,66,66,34,10,106.28
+2026-06-01,Library,7,7,7,2,11.97
+2026-06-01,Municipal Court,4,4,3,3,2.68
+2026-06-01,Parks,599,593,511,443,7.90
+2026-06-01,Planning & Development,419,384,324,277,10.01
+2026-06-01,Police,920,918,848,761,6.56
+2026-06-01,Sanitation,7621,7606,7082,6840,1.43
+2026-06-01,Transportation & Public Works,9522,9238,8458,7893,0.78
+2026-06-01,Water Utilities,728,704,697,632,2.53
+2026-07-01,311 Customer Service,2831,2831,2711,2638,0.89
+2026-07-01,Animal Services,4199,4196,4199,3692,0.10
+2026-07-01,Bond & Construction,2,2,0,0,
+2026-07-01,Budget,81,81,75,75,12.05
+2026-07-01,City Attorney,55,55,26,25,13.43
+2026-07-01,Code Compliance,12217,9034,717,629,6.35
+2026-07-01,Convention & Events,4,4,3,3,5.02
+2026-07-01,Emergency Mgmt & Crisis Response,788,779,563,542,1.63
+2026-07-01,Environmental Quality,20,20,17,17,3.93
+2026-07-01,Facilities & Real Estate,5,5,0,0,
+2026-07-01,Fire-Rescue,114,113,111,61,9.15
+2026-07-01,Housing,71,71,39,6,88.71
+2026-07-01,Library,2,2,2,1,11.98
+2026-07-01,Municipal Court,3,3,3,1,4.24
+2026-07-01,Parks,402,401,344,305,7.69
+2026-07-01,Planning & Development,394,383,305,298,3.88
+2026-07-01,Police,1347,1344,1270,1218,3.20
+2026-07-01,Risk Management,4,4,4,4,1.49
+2026-07-01,Sanitation,7132,7125,6662,6339,1.83
+2026-07-01,Transportation & Public Works,9008,8606,8029,7515,0.86
+2026-07-01,Water Utilities,637,621,601,548,1.20
+2026-08-01,311 Customer Service,2942,2933,2797,2714,1.05
+2026-08-01,Animal Services,4206,4202,4206,3801,0.11
+2026-08-01,Bond & Construction,3,3,0,0,
+2026-08-01,Budget,115,115,107,104,8.11
+2026-08-01,City Attorney,22,22,22,22,14.73
+2026-08-01,Code Compliance,11715,8269,727,644,6.04
+2026-08-01,Convention & Events,7,7,2,2,2.69
+2026-08-01,Emergency Mgmt & Crisis Response,761,746,572,550,1.17
+2026-08-01,Environmental Quality,37,37,35,35,3.80
+2026-08-01,Facilities & Real Estate,3,3,1,0,59.07
+2026-08-01,Fire-Rescue,118,117,111,84,4.74
+2026-08-01,Housing,58,58,26,12,32.49
+2026-08-01,Library,7,7,7,4,5.98
+2026-08-01,Municipal Court,16,16,13,11,4.95
+2026-08-01,Parks,395,390,335,277,8.51
+2026-08-01,Planning & Development,386,364,297,267,4.93
+2026-08-01,Police,999,998,906,866,6.33
+2026-08-01,Risk Management,9,9,9,9,1.05
+2026-08-01,Sanitation,6432,6419,6106,5918,1.79
+2026-08-01,Transportation & Public Works,9265,8839,8395,8081,0.75
+2026-08-01,Water Utilities,816,803,721,684,0.80
+2026-09-01,311 Customer Service,2682,2678,2504,2430,0.73
+2026-09-01,Animal Services,4043,4039,4043,3555,0.10
+2026-09-01,Budget,63,63,58,58,14.14
+2026-09-01,City Attorney,23,23,23,23,12.19
+2026-09-01,Code Compliance,10133,7947,579,555,5.86
+2026-09-01,Convention & Events,5,5,4,4,4.33
+2026-09-01,Emergency Mgmt & Crisis Response,675,665,490,460,1.99
+2026-09-01,Environmental Quality,42,41,39,39,1.97
+2026-09-01,Facilities & Real Estate,8,8,0,0,
+2026-09-01,Fire-Rescue,104,103,98,52,8.87
+2026-09-01,Housing,74,73,23,11,20.14
+2026-09-01,Library,2,2,2,2,8.19
+2026-09-01,Municipal Court,21,21,17,12,6.12
+2026-09-01,Parks,387,382,336,283,10.27
+2026-09-01,Planning & Development,330,311,238,237,5.12
+2026-09-01,Police,956,955,860,783,6.93
+2026-09-01,Risk Management,5,5,5,5,0.94
+2026-09-01,Sanitation,6151,6147,5765,5664,1.21
+2026-09-01,Transportation & Public Works,9434,9280,8229,7884,0.73
+2026-09-01,Water Utilities,941,934,777,764,0.24
+2026-10-01,311 Customer Service,2790,2789,2613,2545,0.18
+2026-10-01,Animal Services,4389,4384,4389,3684,0.13
+2026-10-01,Bond & Construction,1,1,0,0,
+2026-10-01,Budget,91,90,48,48,7.02
+2026-10-01,City Attorney,13,13,10,7,13.15
+2026-10-01,Code Compliance,9695,7581,361,348,5.03
+2026-10-01,Convention & Events,11,11,4,4,2.05
+2026-10-01,Emergency Mgmt & Crisis Response,759,753,558,551,1.28
+2026-10-01,Environmental Quality,44,44,44,43,3.59
+2026-10-01,Facilities & Real Estate,5,4,0,0,
+2026-10-01,Fire-Rescue,118,116,85,16,23.11
+2026-10-01,Housing,63,62,22,22,1.04
+2026-10-01,Library,2,2,2,0,6.50
+2026-10-01,Municipal Court,4,4,4,2,11.20
+2026-10-01,Parks,391,382,322,268,9.90
+2026-10-01,Planning & Development,375,356,266,252,5.96
+2026-10-01,Police,1172,1169,981,869,9.64
+2026-10-01,Risk Management,1,1,1,1,1.84
+2026-10-01,Sanitation,6169,6161,5715,5579,1.23
+2026-10-01,Transportation & Public Works,9148,8979,7727,7447,0.64
+2026-10-01,Water Utilities,770,755,665,652,0.25
+2026-11-01,311 Customer Service,1951,1945,1675,1672,0.15
+2026-11-01,Animal Services,3338,3335,3232,2830,0.11
+2026-11-01,Bond & Construction,1,1,0,0,
+2026-11-01,Budget,36,35,3,3,8.27
+2026-11-01,City Attorney,7,7,3,3,12.87
+2026-11-01,Code Compliance,6075,4801,227,220,3.03
+2026-11-01,Convention & Events,4,4,3,3,1.09
+2026-11-01,Emergency Mgmt & Crisis Response,540,538,305,304,1.01
+2026-11-01,Environmental Quality,29,29,20,20,0.72
+2026-11-01,Facilities & Real Estate,3,3,0,0,
+2026-11-01,Fire-Rescue,85,85,46,43,3.12
+2026-11-01,Housing,39,39,3,3,0.03
+2026-11-01,Municipal Court,4,4,2,2,6.76
+2026-11-01,Parks,247,244,115,115,4.81
+2026-11-01,Planning & Development,219,216,92,91,5.16
+2026-11-01,Police,929,928,354,341,8.98
+2026-11-01,Risk Management,2,2,2,2,0.07
+2026-11-01,Sanitation,3890,3886,3329,3305,1.12
+2026-11-01,Transportation & Public Works,6068,5950,4344,4133,0.49
+2026-11-01,Water Utilities,506,497,392,391,0.19

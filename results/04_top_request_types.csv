@@ -1,0 +1,26 @@
+request_type_name,department,requests,pct_of_fy2026_requests,rank_in_department,typical_target,sla_eligible,pct_on_time,median_days_to_close
+Code Concern - CCS,Code Compliance,118350,27.7,1,4 Business Days,3,100.0,5.82
+Parking - Report a Violation - TPW,Transportation & Public Works,39168,9.2,1,4 Hours,35731,96.4,0.25
+Sanitation Roll Cart Maintenance/Delivery - SAN,Sanitation,36943,8.6,1,3 Business Days,33858,99.9,1.91
+Water/Wastewater Line Locate - 311,311 Customer Service,20136,4.7,1,1 Business Days,19120,95.1,1.05
+Dead Animal Pick Up - SAN,Sanitation,14217,3.3,2,1 Business Days,14088,99.1,0.40
+Animal Loose - DAS,Animal Services,13971,3.3,1,1 Calendar Days,13971,95.2,0.05
+Animal Lack of Care - DAS,Animal Services,12528,2.9,2,2 Calendar Days,12523,76.6,0.15
+Sanitation Missed Garbage - SAN,Sanitation,11680,2.7,3,2 Business Days,11546,92.6,1.36
+Animal Aggressive Behavior - DAS,Animal Services,10939,2.6,3,6 Hours,10936,72.3,0.22
+Complaint/Compliment - 311,311 Customer Service,9796,2.3,2,5 Business Days,9379,85.3,3.92
+Homeless Encampment - EMCR,Emergency Mgmt & Crisis Response,8812,2.1,1,5 Business Days,6329,95.9,1.48
+Street Repair - Routine - TPW,Transportation & Public Works,5686,1.3,2,5 Business Days,4806,88.1,8.61
+Pot Hole - Routine - TPW,Transportation & Public Works,4639,1.1,3,3 Business Days,4295,88.3,2.24
+Park Maintenance/Misc - PKR,Parks,4386,1.0,1,7 Business Days,3762,88.4,7.61
+Alley/Sidewalk/Street Repair - Hazardous - TPW,Transportation & Public Works,4246,1.0,4,1 Calendar Days,4177,97.7,0.25
+Sanitation Missed Recycle - SAN,Sanitation,4205,1.0,4,2 Business Days,4144,94.2,1.64
+Chronic Noise Complaint - DPD,Police,4132,1.0,1,3 Business Days,3642,90.0,8.71
+Animal Community Cat Program - DAS,Animal Services,3818,0.9,4,,3818,100.0,0.00
+Traffic Signal - Flashing - TPW,Transportation & Public Works,3628,0.8,5,6 Hours,3607,98.8,1.14
+Animal Confined - DAS,Animal Services,3617,0.8,5,3 Calendar Days,3617,90.0,0.18
+Extra Police Patrol - DPD,Police,3387,0.8,2,3 Business Days,3210,91.0,6.03
+Animal Nuisance - DAS,Animal Services,3310,0.8,6,15 Calendar Days,3310,82.1,0.91
+Clean Sweep Litter Removal - TPW,Transportation & Public Works,3218,0.8,6,3 Business Days,2851,86.2,2.87
+Sanitation Missed Brush/Bulk - SAN,Sanitation,3187,0.7,5,5 Business Days,3144,85.3,5.89
+Tree Down/Low Limbs - TPW,Transportation & Public Works,3143,0.7,7,12 Hours,3087,99.4,0.12

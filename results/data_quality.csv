@@ -1,0 +1,13 @@
+check_name,row_count,pct_of_downloaded_rows,action
+Rows downloaded (both extracts),964636,100.00,loaded into staging.sr_raw
+Rejected: missing department or request type,11,0.00,"kept in staging.sr_rejects, excluded from core"
+Rejected: closed before it was created,1,0.00,"kept in staging.sr_rejects, excluded from core"
+Rows in core.service_request,964624,100.00,analysis base
+Department spelled two ways (rows relabeled to one canonical name),175825,18.23,mapped through core.department_alias
+Text with non-breaking spaces or extra whitespace (any column),20620,2.14,normalized by staging.clean_text()
+Resolved requests with no published due date,251436,26.07,"kept; excluded from on-time rates, included in days-to-close"
+Due date earlier than the request itself,106,0.01,kept; excluded from on-time rates
+Coordinates missing or outside the Dallas area,134,0.01,set to NULL (no map point)
+No council district (blank or outside 1-14),1476,0.15,kept; excluded from district comparisons
+No ZIP code in the address,152,0.02,kept
+No intake channel recorded,62,0.01,kept as Unknown

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dallas 311 Service Performance Dashboard</title>
+<meta name="description" content="Interactive dashboard of ~1 million Dallas 311 service requests: volume, on-time performance by department and council district, open backlog and call demand. Built with PostgreSQL, Python and Plotly.">
+<script src="https://cdn.plot.ly/plotly-cartesian-4.1.1.min.js" charset="utf-8"></script>
+<style>
+  :root { --navy:#1F3A5F; --teal:#2A9D8F; --yellow:#E9C46A; --orange:#E76F51; --gray:#8D99AE;
+          --ink:#1f2933; --muted:#5f6b7a; --line:#e5e7eb; --bg:#f6f7f9; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         color:var(--ink); background:var(--bg); line-height:1.45; }
+  header { background:var(--navy); color:#fff; padding:22px 20px 18px; }
+  header h1 { margin:0 0 4px; font-size:1.55rem; }
+  header p { margin:0; opacity:.88; font-size:.95rem; }
+  header a { color:#fff; }
+  main { max-width:1180px; margin:0 auto; padding:18px 16px 40px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin-bottom:18px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .kpi .label { color:var(--muted); font-size:.82rem; text-transform:uppercase; letter-spacing:.03em; }
+  .kpi .value { font-size:1.9rem; font-weight:700; margin:2px 0; color:var(--navy); }
+  .kpi .delta { font-size:.88rem; color:var(--muted); }
+  .up { color:#1b7f5a; font-weight:600; } .down { color:#b5442a; font-weight:600; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(480px,1fr)); gap:14px; }
+  @media (max-width:560px){ .grid { grid-template-columns:1fr; } header h1 { font-size:1.25rem; } }
+  h2 { font-size:1.05rem; margin:0 0 2px; }
+  .insight { color:var(--muted); font-size:.9rem; margin:0 0 8px; }
+  .chart { width:100%; height:360px; }
+  .controls { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:6px; }
+  select { font-size:.95rem; padding:6px 8px; border-radius:6px; border:1px solid #cbd2d9; background:#fff; }
+  table { width:100%; border-collapse:collapse; font-size:.86rem; }
+  th, td { padding:7px 8px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+  th:first-child, td:first-child { text-align:left; white-space:normal; }
+  th { color:var(--muted); font-weight:600; background:#fafbfc; position:sticky; top:0; }
+  .tablewrap { max-height:420px; overflow:auto; }
+  .wide { grid-column:1 / -1; }
+  footer { max-width:1180px; margin:0 auto; padding:0 16px 40px; color:var(--muted); font-size:.85rem; }
+  footer h3 { color:var(--ink); font-size:.95rem; margin:18px 0 6px; }
+  footer li { margin-bottom:4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dallas 311 Service Performance</h1>
+  <p id="subtitle">Loading…</p>
+</header>
+
+<main>
+  <section class="kpis" id="kpis"></section>
+
+  <section class="grid">
+    <div class="card wide">
+      <div class="controls">
+        <h2 style="margin-right:auto">Monthly requests and on-time rate</h2>
+        <label for="dept">Department</label>
+        <select id="dept"></select>
+      </div>
+      <p class="insight">Bars: requests created each month (outside reports vs. started by city staff). Line: share of
+        resolved requests closed by their published due date. Fiscal years start October 1.</p>
+      <div id="monthly" class="chart" style="height:400px"></div>
+    </div>
+
+    <div class="card">
+      <h2>Where late closes come from (FY2026)</h2>
+      <p class="insight" id="late-insight"></p>
+      <div id="late" class="chart"></div>
+    </div>
+
+    <div class="card">
+      <h2>Council districts, adjusted for request mix (FY2026)</h2>
+      <p class="insight">Gap = observed on-time rate minus the rate expected from each district's mix of request
+        types (citywide rate per type). Error bars: 95% margin of error.</p>
+      <div id="districts" class="chart"></div>
+    </div>
+
+    <div class="card">
+      <h2>Open backlog by age</h2>
+      <p class="insight" id="backlog-insight"></p>
+      <div id="backlog" class="chart"></div>
+    </div>
+
+    <div class="card">
+      <h2>When residents call 311 (FY2026 phone requests)</h2>
+      <p class="insight" id="phone-insight"></p>
+      <div id="phone" class="chart"></div>
+    </div>
+
+    <div class="card wide">
+      <h2>Department scorecard (FY2026 vs FY2025)</h2>
+      <p class="insight">On-time % counts resolved requests that carried a published due date. Code Compliance
+        publishes one on only a small share of its requests, so its rate covers little of its work.</p>
+      <div class="tablewrap"><table id="scorecard"></table></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <h3>About this dashboard</h3>
+  <ul>
+    <li><strong>Data:</strong> <a id="src-link" href="#">City of Dallas Open Data — 311 Service Requests (d7e7-envw)</a>,
+      every request created since Oct 1, 2024 plus older requests still open, loaded into PostgreSQL.</li>
+    <li><strong>On time:</strong> closed at or before the city's "overall service request due date". Duplicates,
+      transfers to other agencies and cancellations are excluded.</li>
+    <li><strong>Mix-adjusted district gap:</strong> indirect standardization — each district's observed on-time rate minus
+      the rate it would have if every request type performed at its citywide rate.</li>
+    <li><strong>Method, SQL and code:</strong> <a id="repo-link" href="#">GitHub repository</a>.
+      Built by Jude (Joochan) Lee · <a href="https://github.com/ratemyguy">@ratemyguy</a>.</li>
+  </ul>
+</footer>
+
+<script>
+const C = { navy:"#1F3A5F", teal:"#2A9D8F", yellow:"#E9C46A", orange:"#E76F51", gray:"#8D99AE", red:"#9B2226", light:"#A8DADC" };
+const fmt = n => n == null ? "–" : Number(n).toLocaleString("en-US");
+const pct = (n, d = 1) => n == null ? "–" : `${Number(n).toFixed(d)}%`;
+const layoutBase = { margin:{l:10,r:10,t:10,b:40}, font:{family:"-apple-system, Segoe UI, Roboto, Arial", size:12, color:"#1f2933"},
+                     paper_bgcolor:"#fff", plot_bgcolor:"#fff", hoverlabel:{bgcolor:"#fff"} };
+const cfg = { responsive:true, displayModeBar:false };
+
+fetch("data/dashboard.json").then(r => r.json()).then(render).catch(err => {
+  document.getElementById("subtitle").textContent = "Could not load data: " + err;
+});
+
+function render(D) {
+  const m = D.meta, k = Object.fromEntries(D.kpis.map(r => [r.fiscal_year, r]));
+  document.getElementById("subtitle").innerHTML =
+    `${fmt(m.requests_in_database)} requests in a PostgreSQL database · FY2025–FY2027 to date · data as of ${m.as_of} · ` +
+    `<a href="${m.repo_url}">code &amp; SQL</a>`;
+  document.getElementById("src-link").href = m.source_url;
+  document.getElementById("repo-link").href = m.repo_url;
+
+  // KPI cards
+  const k25 = k[2025], k26 = k[2026];
+  const vol = 100 * (k26.requests / k25.requests - 1);
+  const onTimeDelta = k26.pct_on_time - k25.pct_on_time;
+  const b = D.backlog_total;
+  const cards = [
+    ["Requests, FY2026", fmt(k26.requests), `<span class="${vol < 0 ? "down" : "up"}">${vol.toFixed(1)}%</span> vs FY2025 (${fmt(k25.requests)})`],
+    ["Closed on time, FY2026", pct(k26.pct_on_time), `<span class="${onTimeDelta >= 0 ? "up" : "down"}">${onTimeDelta >= 0 ? "+" : ""}${onTimeDelta.toFixed(1)} pts</span> vs FY2025`],
+    ["Median days to close", Number(k26.median_days_to_close).toFixed(1), `FY2025: ${Number(k25.median_days_to_close).toFixed(1)} · 90th pct FY2026: ${k26.p90_days_to_close} days`],
+    ["Open requests now", fmt(b.open_requests), `${fmt(b.past_due)} past due (${(100 * b.past_due / b.open_requests).toFixed(0)}%) · as of ${m.as_of}`],
+  ];
+  document.getElementById("kpis").innerHTML = cards.map(([l, v, d]) =>
+    `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="delta">${d}</div></div>`).join("");
+
+  // Monthly chart with department filter
+  const sel = document.getElementById("dept");
+  sel.innerHTML = D.departments.map(d => `<option>${d}</option>`).join("");
+  const drawMonthly = () => {
+    const rows = D.monthly.filter(r => r.department === sel.value);
+    const x = rows.map(r => r.created_month + "-01");
+    const ext = { x, y: rows.map(r => r.external_requests), type:"bar", name:"Outside reports", marker:{color:C.navy},
+                  hovertemplate:"%{x|%b %Y}<br>%{y:,} outside reports<extra></extra>" };
+    const city = { x, y: rows.map(r => r.requests - r.external_requests), type:"bar", name:"Started by city staff",
+                   marker:{color:C.teal}, hovertemplate:"%{x|%b %Y}<br>%{y:,} city-initiated<extra></extra>" };
+    const line = { x, y: rows.map(r => r.pct_on_time), type:"scatter", mode:"lines+markers", name:"On time (%)", yaxis:"y2",
+                   line:{color:C.orange, width:3}, marker:{size:6}, connectgaps:false,
+                   hovertemplate:"%{x|%b %Y}<br>%{y:.1f}% closed on time<extra></extra>" };
+    Plotly.react("monthly", [ext, city, line], { ...layoutBase, barmode:"stack", margin:{l:55,r:55,t:10,b:40},
+      legend:{orientation:"h", y:1.12}, xaxis:{type:"date", tickformat:"%b\n%Y"},
+      yaxis:{title:{text:"Requests"}, rangemode:"tozero", gridcolor:"#eef0f3"},
+      yaxis2:{title:{text:"On time (%)"}, overlaying:"y", side:"right", showgrid:false, tickmode:"auto", ticksuffix:"%",
+              range:[Math.min(80, Math.floor(Math.min(...rows.map(r => r.pct_on_time).filter(v => v != null)) / 5) * 5 - 5), 100]},
+      shapes:["2025-10-01","2026-10-01"].map(d => ({type:"line", x0:d, x1:d, yref:"paper", y0:0, y1:1, line:{dash:"dot", color:C.gray}})) }, cfg);
+  };
+  sel.onchange = drawMonthly; drawMonthly();
+
+  // Late hotspots
+  const late = [...D.late_hotspots].reverse();
+  const top2 = D.late_hotspots.slice(0, 2).reduce((s, r) => s + r.pct_of_all_late_closes, 0);
+  document.getElementById("late-insight").textContent =
+    `Request types ranked by closes after the due date. The top two (${D.late_hotspots[0].department}) make up ${top2.toFixed(0)}% of all late closes.`;
+  Plotly.newPlot("late", [{ type:"bar", orientation:"h", y: late.map(r => r.request_type_name), x: late.map(r => r.closed_late),
+    marker:{color: late.map(r => r.department === "Animal Services" ? C.orange : C.navy)},
+    customdata: late.map(r => [r.pct_on_time, r.typical_target, r.department]),
+    hovertemplate:"%{y}<br>%{customdata[2]}<br>%{x:,} late · %{customdata[0]}% on time<br>target: %{customdata[1]}<extra></extra>" }],
+    { ...layoutBase, margin:{l:235,r:15,t:5,b:40}, xaxis:{title:{text:"Closed after due date"}, gridcolor:"#eef0f3"}, yaxis:{automargin:true} }, cfg);
+
+  // Districts
+  const ds = [...D.districts].sort((a, b) => a.gap_pts - b.gap_pts);
+  Plotly.newPlot("districts", [{ type:"bar", orientation:"h", y: ds.map(r => "District " + r.council_district), x: ds.map(r => r.gap_pts),
+    error_x:{type:"data", array: ds.map(r => r.moe_95_pts), color:"#555", thickness:1.2},
+    marker:{color: ds.map(r => r.gap_pts <= -1 ? C.orange : r.gap_pts >= 1 ? C.teal : C.gray)},
+    customdata: ds.map(r => [r.pct_on_time_observed, r.pct_on_time_expected_for_mix, r.requests_fy2026]),
+    hovertemplate:"%{y}<br>%{customdata[0]}% on time vs %{customdata[1]}% expected<br>%{customdata[2]:,} requests<extra></extra>" }],
+    { ...layoutBase, margin:{l:85,r:15,t:5,b:45}, xaxis:{title:{text:"Percentage points vs expected"}, zeroline:true, zerolinecolor:"#333", gridcolor:"#eef0f3"} }, cfg);
+
+  // Backlog aging
+  const bl = D.backlog.slice(0, 8).reverse();
+  const buckets = [["age_0_7_days","0–7 days",C.light],["age_8_30_days","8–30",C.teal],["age_31_90_days","31–90",C.yellow],
+                   ["age_91_365_days","91–365",C.orange],["age_over_365_days","Over a year",C.red]];
+  const big = D.backlog[0];
+  document.getElementById("backlog-insight").textContent =
+    `${big.department} holds ${(100 * big.open_requests / b.open_requests).toFixed(0)}% of the ${fmt(b.open_requests)} open requests. Hover for % past due.`;
+  Plotly.newPlot("backlog", buckets.map(([col, name, color]) => ({ type:"bar", orientation:"h", name,
+      y: bl.map(r => r.department), x: bl.map(r => r[col]), marker:{color},
+      customdata: bl.map(r => [r.open_requests, r.pct_past_due, r.median_age_days]),
+      hovertemplate:"%{y}: %{x:,} aged " + name + "<br>%{customdata[0]:,} open · %{customdata[1]}% past due · median age %{customdata[2]} days<extra></extra>" })),
+    { ...layoutBase, barmode:"stack", margin:{l:200,r:15,t:5,b:40}, legend:{orientation:"h", y:-0.2, traceorder:"normal"},
+      xaxis:{title:{text:"Open requests"}, gridcolor:"#eef0f3"}, yaxis:{automargin:true} }, cfg);
+
+  // Phone heatmap
+  const days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  const z = days.map((_, i) => Array.from({length:24}, (_, h) => {
+    const r = D.phone_by_hour.find(p => p.iso_weekday === i + 1 && p.hour === h); return r ? r.phone_requests : 0; }));
+  const total = D.phone_by_hour.reduce((s, r) => s + r.phone_requests, 0);
+  const core = D.phone_by_hour.filter(r => r.iso_weekday <= 5 && r.hour >= 8 && r.hour <= 16).reduce((s, r) => s + r.phone_requests, 0);
+  document.getElementById("phone-insight").textContent =
+    `${(100 * core / total).toFixed(0)}% of ${fmt(total)} phone requests came in on weekdays between 8 AM and 5 PM.`;
+  Plotly.newPlot("phone", [{ type:"heatmap", z, x: Array.from({length:24}, (_, h) => `${String(h).padStart(2,"0")}:00`), y: days,
+    colorscale:[[0,"#f7fbff"],[0.5,"#6baed6"],[1,"#08306b"]], hovertemplate:"%{y} %{x}<br>%{z:,} calls<extra></extra>", colorbar:{thickness:10} }],
+    { ...layoutBase, margin:{l:45,r:10,t:5,b:45}, yaxis:{autorange:"reversed"} }, cfg);
+
+  // Scorecard table
+  const cols = [["department","Department",v=>v],["requests_fy2026","Requests FY26",fmt],["volume_change_pct","Vol. vs FY25",v=>v==null?"–":`${v>0?"+":""}${Number(v).toFixed(1)}%`],
+    ["pct_resolved_without_due_date","No due date",v=>pct(v,0)],["pct_on_time_fy2026","On time FY26",pct],["on_time_change_pts","Change (pts)",v=>v==null?"–":`<span class="${v>=0?"up":"down"}">${v>0?"+":""}${Number(v).toFixed(1)}</span>`],
+    ["median_days_to_close_fy2026","Median days",v=>v==null?"–":Number(v).toFixed(1)],["p90_days_to_close_fy2026","90th pct days",v=>v==null?"–":Number(v).toFixed(1)]];
+  const rows = D.scorecard.filter(r => r.requests_fy2026 >= 100);
+  document.getElementById("scorecard").innerHTML =
+    `<thead><tr>${cols.map(c => `<th>${c[1]}</th>`).join("")}</tr></thead><tbody>` +
+    rows.map(r => `<tr>${cols.map(([key,, f]) => `<td>${f(r[key])}</td>`).join("")}</tr>`).join("") + "</tbody>";
+}
+</script>
+</body>
+</html>

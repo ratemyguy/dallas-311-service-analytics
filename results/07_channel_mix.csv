@@ -1,0 +1,20 @@
+fiscal_year,channel,initiated_by,requests,pct_of_year
+2025,Phone,External,228599,48.1
+2025,API,External,198821,41.8
+2025,Proactive,City,42456,8.9
+2025,Internal,City,3556,0.7
+2025,Email,External,938,0.2
+2025,311-App,External,908,0.2
+2025,Web,External,228,0.0
+2025,Unknown,Unknown,10,0.0
+2025,System,City,1,0.0
+2026,Phone,External,209200,48.9
+2026,API,External,173469,40.5
+2026,Proactive,City,40266,9.4
+2026,Internal,City,3329,0.8
+2026,Email,External,710,0.2
+2026,AI Camera Detection,City,429,0.1
+2026,311-App,External,199,0.0
+2026,Web,External,165,0.0
+2026,Unknown,Unknown,44,0.0
+2026,System,City,15,0.0

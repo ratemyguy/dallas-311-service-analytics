@@ -1,0 +1,4 @@
+fiscal_year,first_day,last_day,requests,external_requests,pct_city_initiated,pct_duplicates,resolved,sla_eligible,pct_resolved_with_due_date,pct_on_time,median_days_to_close,p90_days_to_close
+2025,2024-10-01,2025-09-30,475517,429494,9.7,2.6,442544,316877,71.6,88.9,2.09,19.8
+2026,2025-10-01,2026-09-30,427826,383743,10.3,2.1,399257,285102,71.4,92.2,1.70,16.2
+2027,2026-10-01,2026-11-23,59984,56206,6.3,2.8,49578,37964,76.6,94.3,1.05,10.0

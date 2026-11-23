@@ -1,0 +1,7 @@
+# raw downloads (~285 MB) are rebuilt by etl/fetch_311.py
+data/raw/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
