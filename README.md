@@ -36,7 +36,7 @@ The raw CSVs (~285 MB) are not committed; `etl/fetch_311.py` downloads them from
 ## Approach
 
 ```mermaid
-flowchart LR
+flowchart TB
     A["Dallas Open Data API<br/>(Socrata CSV)"] -->|etl/fetch_311.py| B[("staging.sr_raw<br/>964,636 rows as text")]
     B -->|"02_transform.sql<br/>clean · validate · de-duplicate"| C[("core<br/>normalized tables")]
     B -.->|rule breaks, with reason| R[("staging.sr_rejects")]
